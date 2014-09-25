@@ -52,4 +52,12 @@ So, in summary:
     
 The end!
 
+## filesearch.rb ##
+
+I don't know if you have Ruby installed on your computer, but if you do, run:
+
+    $ ruby filesearch.rb f string_you_are_looking_for
+    
+to find all files that a particular string appears in. I wrote it for the Ruby on Rails application I'm working on but it works well in anything. It's good for when you need to find a particular string across every single source code file in the directory, and all subdirectories.
+
     
