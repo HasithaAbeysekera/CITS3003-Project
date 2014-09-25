@@ -19,7 +19,13 @@ If you want to 'commit' your changes to the server, you first need to 'add' the 
 
     $ git add .
 
-... if you run 'git status' again, you will see that these changes will now be committed when you run:
+If you end up deleting files and you want them to be deleted from the server, you need to run:
+
+    $ git add -u
+
+... this will ensure that the files you deleted locally are also deleted next time you 'commit' your changes.
+
+If you run 'git status' again, you will see that these changes will now be committed when you run:
 
     $ git commit -m "a message about what I changed"
 
@@ -38,15 +44,10 @@ So, in summary:
     $ git pull
     $ git status
     $ git add .
+    $ git add -u (if you deleted anything)
     $ git commit -m "message"
     $ git push
     
-Finally, if you end up deleting files and you want them to be deleted from the server, you need to run:
-
-    $ git add -u
-
-... this will ensure that the files you deleted locally are also deleted next time you 'commit' your changes.
-
 The end!
 
     
