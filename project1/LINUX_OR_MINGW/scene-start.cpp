@@ -346,6 +346,7 @@ display( void )
 
 
     view = Translate(0.0, 0.0, -viewDist);
+    //view = Translate(camRotSidewaysDeg, camRotUpAndOverDeg, -viewDist);
 
 
     SceneObject lightObj1 = sceneObjs[1]; 
