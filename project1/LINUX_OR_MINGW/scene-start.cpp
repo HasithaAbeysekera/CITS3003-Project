@@ -401,6 +401,12 @@ static void adjustRedGreen(vec2 rg)
 static void adjustBlueBrightness(vec2 bl_br) 
   { sceneObjs[toolObj].rgb[2]+=bl_br[0]; sceneObjs[toolObj].brightness+=bl_br[1]; }
 
+static void adjustAmbientDiffuse(vec2 am_di)
+  { sceneObjs[toolObj].ambient+=am_di[0]; sceneObjs[toolObj].diffuse+=am_di[1]; }
+
+static void adjustSpecularShine(vec2 sp_sh)
+  { sceneObjs[toolObj].specular+=sp_sh[0]; sceneObjs[toolObj].shine+=sp_sh[1]; }
+  
   static void lightMenu(int id) {
     deactivateTool();
     if(id == 70) {
@@ -445,7 +451,11 @@ static void materialMenu(int id) {
                       adjustBlueBrightness, mat2(1, 0, 0, 1) );
   }
   // You'll need to fill in the remaining menu items here.					    
-					  
+  if(id==20) {
+	 toolObj = currObject;
+	 setToolCallbacks(adjustAmbientDiffuse, mat2(1, 0, 0, 1),  // left button: X=ambient, y=diffuse
+					  adjustSpecularShine, mat2(1, 0, 0, 1) ); // middle button: X = specular, y=shine
+  }				  
   else { printf("Error in materialMenu\n"); }
 }
 
