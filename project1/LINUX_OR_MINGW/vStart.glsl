@@ -23,6 +23,11 @@ void main()
     // The vector to the light from the vertex    
     vec3 Lvec = LightPosition.xyz - pos;
 
+
+    float distanceToLight = length(LightPosition.xyz - pos);
+    float attenuation = 1.0 / (1.0 + 2.0f * pow(distanceToLight, 2));
+
+
     // Unit direction vectors for Blinn-Phong shading calculation
     vec3 L = normalize( Lvec );   // Direction to the light source
     vec3 E = normalize( -pos );   // Direction to the eye/camera
@@ -46,7 +51,7 @@ void main()
 
     // globalAmbient is independent of distance from the light source
     vec3 globalAmbient = vec3(0.1, 0.1, 0.1);
-    color.rgb = globalAmbient  + ambient + diffuse + specular;
+    color.rgb =  attenuation * (globalAmbient + ambient + diffuse + specular);
     color.a = 1.0;
 
     gl_Position = Projection * ModelView * vPosition;
