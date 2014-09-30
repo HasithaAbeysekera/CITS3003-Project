@@ -1,0 +1,4 @@
+# Ignore the annoying log file and the exe files.
+/project1/LINUX_OR_MINGW/assimp_log.txt
+/project1/LINUX_OR_MINGW/scene-start.exe
+/project1/LINUX_OR_MINGW/scene-start
