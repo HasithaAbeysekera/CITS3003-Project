@@ -1,7 +1,7 @@
 CITS3003-Project
 ================
 
-A place for Michael and Hasitha to store our top secret, amazing, OP, mind-blowing, exasperating, exhilarating pile of shit that we have to do for CITS3003.
+A place for Michael and Hasitha to store our top secret, amazing, OP, mind-blowing, exasperating, exhilarating project that we have to do for CITS3003.
 
 [Project available here](http://undergraduate.csse.uwa.edu.au/units/CITS3003/labsheet.php?fname=project-part1)
 
